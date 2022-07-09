@@ -4,8 +4,6 @@ var database;
 var foodS;
 var foodStock;
 
-var firebase = require("firebase/app");
-
 function preload() {
   dogImg = loadImage("images/dog.png");
   happyDogImg = loadImage("images/happyDog.png");
@@ -16,8 +14,8 @@ function setup() {
 
   database = firebase.database();
 
-  foodStock = database.ref("Food");
-  foodStock.on("value", readStock);
+  // foodStock = database.ref("Food");
+  // foodStock.on("value", readStock);
 
   dog = createSprite(250, 250, 20, 20);
   dog.addImage("dog", dogImg);
